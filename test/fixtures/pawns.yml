@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pawn_number: MyString
+  name: MyText
+  date_initialized: MyText
+  principle: 1
+
+two:
+  pawn_number: MyString
+  name: MyText
+  date_initialized: MyText
+  principle: 1

@@ -1,0 +1,30 @@
+<%= form_for :pawn, url: pawns_path do |f| %>
+
+  <% if @pawn.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@pawn.errors.count, "error") %> prohibited
+        this pawn from being saved:
+      </h2>
+      <ul>
+        <% @pawn.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :pawn_number %><br>
+    <%= f.text_field :pawn_number %>
+  </p>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
