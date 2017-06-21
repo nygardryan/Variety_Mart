@@ -1,20 +1,27 @@
-<h1>Listing Pawns</h1>
- 
-<table>
-  <tr>
-    <th>Pawn Number</th>
-    <th>Name</th>
-  </tr>
- 
+<h1 style="text-align: center;">Listing Pawns</h1>
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Balance</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @pawns.each do |pawn| %>
     <tr>
-      <td><%= pawn.pawn_number %></td>
+      <th scope="row"><%= link_to pawn.pawn_number, pawn_path(pawn) %></th>
       <td><%= pawn.name %></td>
-      <td><%= link_to 'Show', pawn_path(pawn) %></td>
+      <td><%= pawn.created_at.strftime("%B %d, %Y") %></td>
+      <td><%= pawn.principle %></td>
       <td><%= link_to 'Edit', edit_pawn_path(pawn) %></td>
       <td><%= link_to 'Destroy', pawn_path(pawn),
         method: :delete,
         data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
+  </tbody>
 </table>

@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def inventory
   end
-
+  
   def biker
   end
 

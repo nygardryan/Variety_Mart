@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  date: MyText
+  amount: 1
+  pawns: one
+
+two:
+  customer_name: MyString
+  date: MyText
+  amount: 1
+  pawns: two

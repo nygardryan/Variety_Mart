@@ -9,5 +9,11 @@
   <%= @pawn.name %>
 </p>
 
+<h2>Add a Payment History:</h2>
+<%= render 'payments/form' %>
+
+<h2>Payment History</h2>
+<%= render @pawn.payments %>
+
 <%= link_to 'Edit', edit_pawn_path(@pawn) %> |
 <%= link_to 'Back', pawns_path %>

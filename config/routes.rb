@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   root 'pages#home'
 
-  resources :pawns
+  resources :pawns do
+    member do
+      get :search
+    end
+    resources :payments, shallow: true
+  end
   
   get 'pages/home'
 
@@ -15,6 +21,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'pages/bigAndTall'
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

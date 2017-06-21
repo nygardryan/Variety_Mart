@@ -12,6 +12,10 @@ class PawnsController < ApplicationController
     @pawn = Pawn.find(params[:id])
   end
 
+  def search
+    @pawn = Pawn.find(params[:id])
+  end
+
   def create
     @pawn = Pawn.new(pawn_params)
    
@@ -36,17 +40,16 @@ class PawnsController < ApplicationController
     end
   end
 
-
-def destroy
-  @pawn = Pawn.find(params[:id])
-  @pawn.destroy
- 
-  redirect_to pawns_path
-end
+  def destroy
+    @pawn = Pawn.find(params[:id])
+    @pawn.destroy
+   
+    redirect_to pawns_path
+  end
 
 
   private
   def pawn_params
-    params.require(:pawn).permit(:pawn_number, :name)
+    params.require(:pawn).permit(:pawn_number, :name, :principle, :date)
   end
 end

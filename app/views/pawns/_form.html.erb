@@ -8,23 +8,40 @@
       </h2>
       <ul>
         <% @pawn.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <li><%= add_gritter("This is a notification just for you!", :title => msg) %>
+</li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :pawn_number %><br>
-    <%= f.text_field :pawn_number %>
-  </p>
- 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+<div class="container">
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">Pawn #</label>
+    <div class="col-10">
+    <%= f.text_area :pawn_number, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">Name</label>
+    <div class="col-10">
+    <%= f.text_area :name, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+    <div class="col-10">
+      <input class="form-control" id="example-tel-input">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-number-input" class="col-2 col-form-label">Principle</label>
+    <div class="col-10">
+      <%= f.text_area :principle, :class => "form-control" %>
+    </div>
+  </div>
+
+  <%= f.submit :class => "btn btn-primary" %>
+  <%= link_to 'Back', pawns_path, :class => "btn btn-secondary" %>
+</div>
 <% end %>
