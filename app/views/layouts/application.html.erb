@@ -11,11 +11,12 @@
   <body>
    <%= render './shared/nav.html.erb' %>
     <%= yield %>
-  </body>
-</html>
-
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false) %>
+    <%= render './shared/footer.html.erb' %>
+  </body>
+</html>
+
 
 

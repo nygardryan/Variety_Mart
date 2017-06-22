@@ -3,6 +3,9 @@
 
 @import "gritter";
 
+body {
+    background-image: url("https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg");
+}
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 color: #000;  /*Sets the text hover color on navbar*/
@@ -42,4 +45,43 @@ background-color: #030033;
 
 .nav-link {
   color: white;
+}
+
+.footer {
+  margin-bottom: 0px;
+  bottom:0;
+  width: 100%;
+
+  color: white;
+  padding: 30px,5px,0px,0px;
+  text-align: center;
+  background-color: grey;
+}
+ 
+.footer row {
+    font-size: 14px;
+}
+
+.card-picture {
+  height: 13em;
+    width: 100%;
+    padding-width: 100%;
+    border: 5px solid grey;
+}
+
+.big-picture {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 75%;
+
+}
+
+.big-picture-picture {
+    width: 100%;
+    border: 5px solid grey;
+    margin: 25px, 0px,0px,25px
+}
+
+.header {
+    background-image: url("http://templatemints.com/rttheme13/images/background_images/abstract_background7.jpg");
 }

@@ -50,6 +50,6 @@ class PawnsController < ApplicationController
 
   private
   def pawn_params
-    params.require(:pawn).permit(:pawn_number, :name, :principle, :date)
+    params.require(:pawn).permit(:pawn_number, :name, :principle)
   end
 end
