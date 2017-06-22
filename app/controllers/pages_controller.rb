@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def biker
   end
 
+  def pawns
+  end
+
   def contact
   end
 

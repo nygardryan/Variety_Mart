@@ -76,6 +76,8 @@ GEM
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gritter (1.2.0)
@@ -199,6 +201,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
+  font-awesome-rails (~> 4.7, >= 4.7.0.1)
   gritter (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails
