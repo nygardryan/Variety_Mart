@@ -18,6 +18,9 @@ class PagesController < ApplicationController
   end
 
   def bigAndTall
+  end
+
+  def shopping
 
   end
 end
