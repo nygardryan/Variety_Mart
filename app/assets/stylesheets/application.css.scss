@@ -72,6 +72,8 @@ background-color: #030033;
   padding: 30px,5px,0px,0px;
   text-align: center;
   background-color: grey;
+
+
 }
  
 .footer row {
@@ -109,4 +111,44 @@ background-color: #030033;
   @include media-breakpoint-only(xl) {
     column-count: 3;
   }
+}
+
+.card1 {
+  background-image: url("http://s3.tupianku.com/view/full/5531/WANGLEI0040-11.JPG");
+  background-size: cover;
+  }
+
+.card1:hover {
+    background-image: url("https://d3dxp4akn1otfb.cloudfront.net/2015-Harley-Davidson-Sportster-motorcycle--Motorcycle-200431154-2d999af462730f62724c806ff6181f04.jpg?r=thumbnail&h=280&w=280&s=1");
+
+}
+
+.card2 {
+  background-image: url("http://image.dhgate.com/0x0/f2/albu/g4/M00/9E/8B/rBVaEVcHBZmASlz4AAFDyqigdEY067.jpg");
+  background-size: cover;
+  }
+
+.card2:hover {
+    background-image: url("http://cdn.shopify.com/s/files/1/0105/4542/products/a4-bamboo_grande.jpg?v=1440166124");
+
+}
+
+.card3 {
+  background-image: url("http://appleindustrialsupplyco.com/wp-content/uploads/2013/04/tools.jpg");
+  background-size: cover;
+  }
+
+.card3:hover {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lRTjEa4zDwgDAA9dDlWRF_lZ1VC1cv6KEp7NfoOCIap_q6qNxQ");
+
+}
+
+.card4 {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/91EzEngj77L._SY355_.jpg");
+  background-size: cover;
+  }
+
+.card4:hover {
+    background-image: url("http://www.bladehq.com/imgs/knives/manual-knives/spyderco-manual/spyderco-paramilitary/Spyderco-Para-3-black-C223GP-BHQ-50648-er-large.jpg");
+
 }

@@ -2,6 +2,11 @@ class PawnsController < ApplicationController
 
   def index
     @pawns = Pawn.all
+    if params[:search_number]
+      @pawns = Pawn.find_by(pawn_number: params[:search_number])
+    else
+      @pawns = Pawn.all.order("created_at DESC")
+    end
   end
 
   def new
@@ -12,8 +17,14 @@ class PawnsController < ApplicationController
     @pawn = Pawn.find(params[:id])
   end
 
+
   def search
-    @pawn = Pawn.find(params[:id])
+    if params[:search_number] && params[:search_name]
+      @pawn = Pawn.find_by(pawn_number: params[:search_number])
+      if @pawn.name === params[:search_name]
+        redirect_to @pawn
+      end
+    end
   end
 
   def create

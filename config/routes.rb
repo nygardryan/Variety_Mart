@@ -2,16 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :admins
   root 'pages#home'
-
   resources :pawns do
-    member do
+    collection do
       get :search
     end
     resources :payments, shallow: true
   end
   
-  get 'pages/home'
-
   get 'pages/layaway'
 
   get 'pages/inventory'

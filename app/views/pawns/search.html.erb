@@ -1,5 +1,12 @@
 <h1>hello</h1>
 
-<%= @pawn.inspect %>
-<%#= f.text_area :pawn_number, :class => "form-control" %>
-<%#= f.submit %>
+
+<%= form_tag(search_pawns_path, :method => "get") do %>
+    <%= text_field_tag :search_number, params[:search_number], placeholder: "Search for Pawn Number" %>
+    <%= text_field_tag :search_name, params[:search_name], placeholder: "Search for Name" %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+
+
+
