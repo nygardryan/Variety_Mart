@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :charges
   devise_for :admins
   root 'pages#home'
   resources :pawns do
     collection do
-      get :search
+      get :payment
+      post :search
     end
     resources :payments, shallow: true
   end

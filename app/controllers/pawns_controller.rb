@@ -1,4 +1,9 @@
 class PawnsController < ApplicationController
+  before_action :require_login
+  before_action :set_pawn, only: [:show]
+
+  Stripe.api_key = ENV['SECRET_KEY']
+
 
   def index
     @pawns = Pawn.all
@@ -17,6 +22,39 @@ class PawnsController < ApplicationController
     @pawn = Pawn.find(params[:id])
   end
 
+  def payment
+  @amount = params[:amount]
+
+  @amount = @amount.gsub('$', '').gsub(',', '')
+
+  begin
+    @amount = Float(@amount).round(2)
+  rescue
+    flash[:error] = 'Charge not completed. Please enter a valid amount in USD ($).'
+    redirect_to new_charge_path
+    return
+  end
+
+  @amount = (@amount * 100).to_i # Must be an integer!
+
+  if @amount < 500
+    flash[:error] = 'Charge not completed. Donation amount must be at least $5.'
+    redirect_to new_charge_path
+    return
+  end
+
+  Stripe::Charge.create(
+    :amount => @amount,
+    :currency => 'usd',
+    :source => params[:stripeToken],
+    :description => 'Custom donation'
+  )
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+end
+  
 
   def search
     if params[:search_number] && params[:search_name]
@@ -58,8 +96,20 @@ class PawnsController < ApplicationController
     redirect_to pawns_path
   end
 
+  def set_pawn
+    if Pawn.find(params[:id])
+      @pawn = Pawn.find(params[:id])
+    end
+  end
 
   private
+  def require_login
+    unless admin_signed_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to new_user_session_path # halts request cycle
+    end
+  end
+
   def pawn_params
     params.require(:pawn).permit(:pawn_number, :name, :principle)
   end

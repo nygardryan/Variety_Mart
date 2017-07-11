@@ -1,15 +1,4 @@
-  <p>
-    <strong>Customer Name:</strong>
-    <%= payment.customer_name %>
-  </p>
- 
-  <p>
-    <strong>Date:</strong>
-    <%= payment.date %>
-  </p>
-
-  <p>
-  <%= link_to 'Destroy Payment', [payment.pawn, payment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+    <tr>
+      <th scope="row"><%= payment.date %></th>
+      <td><%= payment.customer_name %></td>
+    </tr>
