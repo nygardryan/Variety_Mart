@@ -29,40 +29,4 @@
 <%= link_to 'Back', pawns_path %>
 
 
-<%= form_tag(payment_pawns_path, :method => "get") do %>
-  <div id="error_explanation">
-    <% if flash[:error].present? %>
-      <p><%= flash[:error] %></p>
-    <% end %>
-  </div>
-  <article>
-    <%= label_tag(:amount, 'Donation Amount:') %>
-    <%= text_field_tag(:amount) %>
-  </article>
-  <article>
-    <%= hidden_field_tag(:stripeToken) %>
-  </article>
-  <button id='donateButton'>Donate</button>
-<% end %>
-
-<script src="https://checkout.stripe.com/checkout.js"></script>
-
-<script>
-var handler = StripeCheckout.configure({
-  key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-  locale: 'auto',
-  name: 'Variety Mart',
-  description: 'One-time payment',
-  token: function(token) {
-    $('input#stripeToken').val(token.id);
-    $('form').submit();
-  }
-});
-
-$(window).on('popstate', function() {
-  handler.close();
-});
-</script>
-
-
 </div>
