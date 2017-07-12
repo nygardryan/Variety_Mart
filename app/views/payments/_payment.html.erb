@@ -1,4 +1,4 @@
     <tr>
-      <th scope="row"><%= payment.date %></th>
-      <td><%= payment.customer_name %></td>
+      <th scope="row"><%= payment.created_at %></th>
+      <td>$<%= payment.amount.to_f %></td>
     </tr>

@@ -5,6 +5,7 @@
     <tr>
       <th scope="row"><%= @pawn.pawn_number %></th>
       <td><%= @pawn.name %></td>
+      <td>$<%= @pawn.principle %></td>
       <td><%= link_to 'Edit', edit_pawn_path(@pawn) %></td>
     </tr>
   </thead>
@@ -13,7 +14,7 @@
   <thead class="thead-default">
     <tr>
       <th>Date of Payment</th>
-      <th>Customer Name</th>
+      <th>Amount of Payment</th>
     </tr>
   </thead>
   <tbody>
@@ -22,11 +23,9 @@
 </table>
 
 
-<h2>Add a Payment History:</h2>
-<%= render 'payments/form' %>
-
-
 <%= link_to 'Back', pawns_path %>
-
+<% if @pawn.principle > 0 %>
+  <%= link_to "Pay!!!!", new_charge_path(:pawn => @pawn) %>
+<% end %>
 
 </div>

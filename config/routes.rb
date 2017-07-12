@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :charges
+  get 'charges/new'
+  
+  get 'charges/create'
+
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
+
+  
+
+  resources :charges, only: [:new, :create]
   devise_for :admins
   root 'pages#home'
   resources :pawns do
