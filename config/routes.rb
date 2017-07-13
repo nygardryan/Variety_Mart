@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :pawns do
     collection do
       get :payment
-      post :search
+      get :search
     end
     resources :payments, shallow: true
   end

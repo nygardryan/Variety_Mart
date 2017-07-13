@@ -10,8 +10,8 @@ class ChargesController < ApplicationController
 
   def create
     @pawn = Pawn.find(params[:pawn])
-    @amount = params[:amount]
-    if @amount.to_i < @pawn.principle.to_i
+    @amount = params[:amount].to_i
+    if @amount <= @pawn.principle.to_i
       customer = StripeTool.create_customer(email: params[:stripeEmail], 
                                             stripe_token: params[:stripeToken])
 

@@ -126,6 +126,7 @@ background-color: #030033;
 .card1 {
   background-image: url("http://s3.tupianku.com/view/full/5531/WANGLEI0040-11.JPG");
   background-size: cover;
+  background-position: center;
   }
 
 .card1:hover {
@@ -134,31 +135,46 @@ background-color: #030033;
 }
 
 .card2 {
-  background-image: url("http://image.dhgate.com/0x0/f2/albu/g4/M00/9E/8B/rBVaEVcHBZmASlz4AAFDyqigdEY067.jpg");
+  background-image: url("joystick-1288449_1280.jpg");
   background-size: cover;
+  background-position: center;
   }
 
 .card2:hover {
-    background-image: url("http://cdn.shopify.com/s/files/1/0105/4542/products/a4-bamboo_grande.jpg?v=1440166124");
+    background-image: url("ukulele-2205860_1920.jpg");
 
 }
 
 .card3 {
-  background-image: url("http://appleindustrialsupplyco.com/wp-content/uploads/2013/04/tools.jpg");
+  background-image: url("eduard-militaru-139559.jpg");
   background-size: cover;
+  background-position: right;
   }
 
 .card3:hover {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lRTjEa4zDwgDAA9dDlWRF_lZ1VC1cv6KEp7NfoOCIap_q6qNxQ");
-
+  background-image: url("axe-1853691_1920.jpg");
+  background-position: left;
 }
 
 .card4 {
-  background-image: url("https://images-na.ssl-images-amazon.com/images/I/91EzEngj77L._SY355_.jpg");
+  background-image: url("army-2186_1920.jpg");
   background-size: cover;
+  background-position: center;
   }
 
 .card4:hover {
-    background-image: url("http://www.bladehq.com/imgs/knives/manual-knives/spyderco-manual/spyderco-paramilitary/Spyderco-Para-3-black-C223GP-BHQ-50648-er-large.jpg");
+    background-image: url("http://surferspirit.org/wp-content/uploads/t-shirt.jpg");
+    background-position: top;
+}
 
+.carousel-item {
+  width:41em;
+  height:35em;
+}
+
+.layawayPicture {
+  border: 6px solid grey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 22rem;
 }

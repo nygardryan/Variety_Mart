@@ -7,10 +7,18 @@
   <div class="container-fluid" style="display: block; width: auto; background-color: grey; margin-left: auto;">
     <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link active" href="/">Home</a>
+      <% if current_page?(root_path) %>
+        <a class="nav-link active" href="/">Home</a>
+      <% else %>
+        <a class="nav-link" href="/">Home</a>
+      <% end %>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+      <% if current_page?(pages_shopping_path) || current_page?(pages_pawns_path) || current_page?(pages_layaway_path) %>
+        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+      <% else %>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+      <% end %>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="/pages/shopping">Shopping</a>
         <a class="dropdown-item" href="/pages/pawns">Pawn</a>
@@ -18,14 +26,22 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clothing</a>
+      <% if current_page?(pages_biker_path) %>
+        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clothing</a>
+      <% else %>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clothing</a>
+      <% end %>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="/pages/biker">Motorcycle</a>
         <a class="dropdown-item" href="/pages/biker">Big and Tall</a>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/pages/contact">Contact</a>
+      <% if current_page?(pages_contact_path) %>
+        <a class="nav-link active" href="/pages/contact">Contact</a>
+      <% else %>
+        <a class="nav-link" href="/pages/contact">Contact</a>
+      <% end %>
     </li>
     </ul>
   </div>

@@ -1,6 +1,6 @@
 class PawnsController < ApplicationController
   before_action :require_login
-  before_action :set_pawn, only: [:show]
+  # before_action :set_pawn, only: [:show]
 
   Stripe.api_key = ENV['SECRET_KEY']
 
@@ -63,11 +63,11 @@ class PawnsController < ApplicationController
     redirect_to pawns_path
   end
 
-  def set_pawn
-    if Pawn.find(params[:id])
-      @pawn = Pawn.find(params[:id])
-    end
-  end
+  # def set_pawn
+  #   if Pawn.find(params[:id])
+  #     @pawn = Pawn.find(params[:id])
+  #   end
+  # end
 
   private
   def require_login
