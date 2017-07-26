@@ -22,8 +22,9 @@
   </tbody>
 </table>
 
-
-<%= link_to 'Back', pawns_path %>
+<% if current_admin %>
+  <%= link_to 'Back', pawns_path %>
+<% end %>
 <% if @pawn.principle > 0 %>
   <%= link_to "Pay!!!!", new_charge_path(:pawn => @pawn) %>
 <% end %>

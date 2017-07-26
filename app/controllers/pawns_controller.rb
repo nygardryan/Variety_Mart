@@ -1,5 +1,5 @@
 class PawnsController < ApplicationController
-  before_action :require_login
+  before_action :require_login, except: [:search, :show]
   # before_action :set_pawn, only: [:show]
 
   Stripe.api_key = ENV['SECRET_KEY']
