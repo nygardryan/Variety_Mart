@@ -3,6 +3,10 @@
 
 @import "gritter";
 
+.test {
+  background-color: red;
+}
+
 h1 {
   font-family: Times, serif;
   font-size: 48pt;
@@ -122,7 +126,6 @@ background-color: #030033;
   }
 }
 
-
 .card1 {
   background-image: url("http://s3.tupianku.com/view/full/5531/WANGLEI0040-11.JPG");
   background-size: cover;
@@ -135,7 +138,7 @@ background-color: #030033;
 }
 
 .card2 {
-  background-image: url("joystick-1288449_1280.jpg");
+  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5396/5396001_sd.jpg;maxHeight=550;maxWidth=642");
   background-size: cover;
   background-position: center;
   }
