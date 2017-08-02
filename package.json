@@ -1,5 +1,8 @@
 {
   "name": "VarietyMart",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "tether": "^1.4.0"
+  }
 }

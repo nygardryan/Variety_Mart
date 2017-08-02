@@ -4,7 +4,6 @@
     <title>VarietyMart</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
 
-    <%= javascript_include_tag "application" %>
 
     <%= csrf_meta_tags %>
 
@@ -13,6 +12,7 @@
   </head>
 
   <body>
+
    <%= render './shared/nav.html.erb' %>
     <%= yield %>
        <p class="notice"><%= notice %></p>

@@ -15,7 +15,7 @@
 //= require_tree .
 //= require gritter
 //= require jquery3
-//= require jquery_ujs
+//= require tether
 //= require popper
 //= require bootstrap-sprockets
 
