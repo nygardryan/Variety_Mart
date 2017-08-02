@@ -3,7 +3,9 @@
 
 @import "gritter";
 
-
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 
 h1 {
   font-family: Times, serif;
@@ -142,23 +144,23 @@ background-color: #030033;
   }
 
 .card2:hover {
-    background-image: url("/assets/images/ukulele-2205860_1920.jpg");
+    background-image: url("https://i.ytimg.com/vi/UfZmMJKIBec/maxresdefault.jpg");
 
 }
 
 .card3 {
-  background-image: url("eduard-militaru-139559.jpg");
+  background-image: url("http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2015/12/Fortified-Bicycle-Invincible-Theft-Proof-Bike-8-889x675.jpg");
   background-size: cover;
   background-position: right;
   }
 
 .card3:hover {
-  background-image: url("axe-1853691_1920.jpg");
+  background-image: url("http://cdn3.craftsy.com/blog/wp-content/uploads/2015/03/finished-hatchet-full.jpg");
   background-position: left;
 }
 
 .card4 {
-  background-image: url("army-2186_1920.jpg");
+  background-image: url("https://www.gizmoway.com/wp-content/uploads/2017/02/swissarmy.jpg");
   background-size: cover;
   background-position: center;
   }
