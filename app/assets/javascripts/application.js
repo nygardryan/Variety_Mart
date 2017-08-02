@@ -18,6 +18,10 @@
 //= require popper
 //= require bootstrap-sprockets
 
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap.min
+
 
 $('#donateButton').on('click', function(e) {
   e.preventDefault();
