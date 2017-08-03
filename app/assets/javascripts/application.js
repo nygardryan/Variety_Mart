@@ -11,13 +11,16 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
 //= require_tree .
 //= require gritter
 //= require jquery3
 //= require tether
 //= require popper
 //= require bootstrap-sprockets
+//= require turbolinks
 
 
 $('#donateButton').on('click', function(e) {
