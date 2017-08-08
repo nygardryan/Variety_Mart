@@ -1,4 +1,6 @@
 <div class="container">
+  <h2>Pay for Pawn</h2>
+  <p>Now enter the amount you wish to pay</p>
   <%= form_tag charges_path(:pawn => @pawn) do %>
 
     <article>
@@ -10,8 +12,6 @@
       <div class="input-group">
         <span class="input-group-addon">$</span>
         <%= text_field_tag(:amount) %>
-        
-        <span class="input-group-addon">.00</span>
       </div>
       <label class="amount">
         <span><%= @amount %></span>

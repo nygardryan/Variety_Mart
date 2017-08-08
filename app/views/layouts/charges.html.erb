@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <meta charset="UTF-8">
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="Pawnshop,Pawn,Layaway,Power Tools,Clothing,Leather,Biker">
+
+    <meta name="description" content="Variety Mart is a the best local pawn shop in Idaho Falls">
+
+
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
 </head>
 <body>
-  <%= yield %>
+     <%= render './shared/nav.html.erb' %>
+    <%= yield %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false) %>
+    <%= render './shared/footer.html.erb' %>
 </body>
 </html>
